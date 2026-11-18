@@ -79,12 +79,12 @@ end
 function dotsync --description "Sync dotfiles with GitHub"
     set -l prev_dir (pwd)
     cd ~/dotfiles
-    git pull --rebase
     if test -n "$(git status --porcelain)"
         git add .
         git commit -m "Sync from "(hostname)
-        git push
     end
+    git pull --rebase
+    and git push
     cd $prev_dir
     source ~/.config/fish/config.fish
     echo "Dotfiles synced and reloaded!"
