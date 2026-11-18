@@ -14,6 +14,31 @@ switch (uname)
         if test -x /home/linuxbrew/.linuxbrew/bin/brew
             eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
         end
+
+        # Linux compatibility wrappers for macOS pbcopy / pbpaste
+        if not command -q pbcopy
+            function pbcopy --description "Copy stdin to clipboard on Linux"
+                if set -q WAYLAND_DISPLAY; and command -q wl-copy
+                    wl-copy $argv
+                else if command -q xclip
+                    xclip -selection clipboard $argv
+                else if command -q xsel
+                    xsel --clipboard --input $argv
+                end
+            end
+        end
+
+        if not command -q pbpaste
+            function pbpaste --description "Paste clipboard to stdout on Linux"
+                if set -q WAYLAND_DISPLAY; and command -q wl-paste
+                    wl-paste $argv
+                else if command -q xclip
+                    xclip -selection clipboard -o $argv
+                else if command -q xsel
+                    xsel --clipboard --output $argv
+                end
+            end
+        end
 end
 
 # Environment variables
@@ -45,10 +70,24 @@ if command -q eza
     alias lta 'lt -a'
 end
 
-# Reload config
+# Reload & sync config
 function reload
     source ~/.config/fish/config.fish
     and echo "config reloaded"
+end
+
+function dotsync --description "Sync dotfiles with GitHub"
+    set -l prev_dir (pwd)
+    cd ~/dotfiles
+    git pull --rebase
+    if test -n "$(git status --porcelain)"
+        git add .
+        git commit -m "Sync from "(hostname)
+        git push
+    end
+    cd $prev_dir
+    source ~/.config/fish/config.fish
+    echo "Dotfiles synced and reloaded!"
 end
 
 # Config shortcuts
