@@ -43,7 +43,6 @@ end
 
 # Environment variables
 set -gx STARSHIP_CONFIG ~/.config/starship/starship.toml
-set -gx OLLAMA_HOST "http://192.168.0.179:11434"
 
 # Vi mode (use -g instead of -U in config.fish to prevent sync conflicts)
 set -g fish_key_bindings fish_vi_key_bindings
