@@ -161,3 +161,8 @@ if command -q brew
         brew cleanup $argv
     end
 end
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /var/home/playtron/.lmstudio/bin
+# End of LM Studio CLI section
+
