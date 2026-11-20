@@ -1,0 +1,183 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Seb-GRAF/StableBar/v0.17.0/stablebar.schema.json",
+  "bar": {
+    "height": 30,
+    "offset": 0,
+    "inset": 12,
+    "spacing": 8,
+    "belowMenuBar": false,
+    "hideMenuBar": true,
+    "keepWindowsClear": false,
+    "motion": "none",
+    "glass": {
+      "enabled": true,
+      "transparency": 0.25
+    }
+  },
+  "widgets": [
+    {
+      "id": "apple",
+      "position": "left",
+      "type": "appleMenu",
+      "click": "menu"
+    },
+    {
+      "id": "sound",
+      "type": "audio",
+      "position": "right",
+      "style": {
+        "fontSize": 12
+      }
+    },
+    {
+      "id": "widget-94ce1dcb",
+      "position": "left",
+      "type": "workspaces",
+      "workspace": {
+        "windows": true,
+        "showApps": false,
+        "badges": "dot",
+        "focusedWindowStyle": null,
+        "indicatorStyle": {
+          "placement": "belowBar",
+          "background": {
+            "gradient": {
+              "angle": 90,
+              "colors": [
+                "@token.track",
+                "@token.critical"
+              ]
+            }
+          },
+          "height": 1
+        },
+        "style": {
+          "fontWeight": "light",
+          "fontSize": 13
+        },
+        "appStyle": {
+          "fontName": "JetBrainsMono Nerd Font",
+          "fontSize": 20
+        },
+        "indicator": "background"
+      },
+      "style": {
+        "fontName": "JetBrainsMono Nerd Font",
+        "fontWeight": "light",
+        "fontSize": 12,
+        "foreground": "#f5f5f7ff",
+        "borderColor": null,
+        "accent": "@token.track"
+      },
+      "icon": "",
+      "background": null,
+      "tooltip": null
+    },
+    {
+      "details": true,
+      "id": "widget-907ed3ae",
+      "position": "right",
+      "type": "battery",
+      "style": {
+        "fontName": "JetBrainsMono Nerd Font",
+        "fontWeight": "medium",
+        "fontSize": 12
+      },
+      "layout": null
+    },
+    {
+      "id": "widget-f9181d5c",
+      "position": "right",
+      "type": "menuBarItems",
+      "display": "all",
+      "shown": [
+        {
+          "app": "com.apple.controlcenter",
+          "item": "com.apple.menuextra.wifi",
+          "display": "live"
+        },
+        "symbol"
+      ],
+      "hidden": [
+        {
+          "app": "com.apple.controlcenter",
+          "item": "com.apple.menuextra.battery"
+        },
+        {
+          "app": "com.apple.controlcenter",
+          "item": "com.apple.menuextra.sound"
+        },
+        {
+          "app": "com.apple.campo"
+        },
+        {
+          "app": "com.apple.controlcenter",
+          "item": "com.apple.menuextra.clock"
+        }
+      ],
+      "icon": null
+    },
+    {
+      "details": true,
+      "format": "E d MMM h:mm",
+      "id": "widget-2a839e70",
+      "position": "right",
+      "type": "clock",
+      "display": "all",
+      "timeZone": null,
+      "style": {
+        "fontName": "JetBrainsMono Nerd Font",
+        "fontSize": 12,
+        "fontWeight": "light"
+      }
+    },
+    {
+      "id": "widget-b2e3b9c0",
+      "position": "left",
+      "type": "activeApp"
+    }
+  ],
+  "workspaceSource": "aerospace",
+  "packages": [
+    {
+      "enabled": true,
+      "id": "now-playing",
+      "settings": {
+        "barWidth": 160
+      },
+      "version": "1.2.2"
+    },
+    {
+      "enabled": false,
+      "id": "agent-status",
+      "settings": {
+        "sessions": "all"
+      },
+      "version": "1.0.4"
+    }
+  ],
+  "widgetOrder": [
+    "apple",
+    "widget-94ce1dcb",
+    "widget-b2e3b9c0",
+    "now-playing",
+    "widget-907ed3ae",
+    "sound",
+    "widget-f9181d5c",
+    "widget-2a839e70"
+  ],
+  "widgetOverrides": {
+    "now-playing": {
+      "enabled": true,
+      "position": "right",
+      "style": {
+        "fontName": "JetBrainsMono Nerd Font",
+        "fontSize": 12,
+        "fontWeight": "light"
+      }
+    }
+  },
+  "defaults": {
+    "background": "#00000066"
+  }
+}
