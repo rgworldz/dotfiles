@@ -10,3 +10,7 @@ options=(
 )
 
 borders "${options[@]}"
+
+# >>> Scene: managed include. Remove this block to detach Scene. >>>
+borders active_color=0xff89b4fa inactive_color=0xff585b70
+# <<< Scene <<<

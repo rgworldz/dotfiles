@@ -1,0 +1,14 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export EDITOR:nvim
+SETUVAR --export GAMEOS_IP_ADDRESS:192\x2e168\x2e0\x2e107
+SETUVAR --export OLLAMA_API_BASE:http\x3a//192\x2e168\x2e0\x2e179\x3a11434
+SETUVAR --export OLLAMA_HOST:http\x3a//192\x2e168\x2e0\x2e179\x3a11434
+SETUVAR --export VISUAL:nvim
+SETUVAR __fish_initialized:4300
+SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1erose\x2dpine/fish
+SETUVAR _fisher_rose_2D_pine_2F_fish_files:\x7e/\x2econfig/fish/themes/Ros\u00e9\x20Pine\x20Auto\x2etheme\x1e\x7e/\x2econfig/fish/themes/Ros\u00e9\x20Pine\x20Dawn\x2etheme\x1e\x7e/\x2econfig/fish/themes/Ros\u00e9\x20Pine\x20Moon\x20Auto\x2etheme\x1e\x7e/\x2econfig/fish/themes/Ros\u00e9\x20Pine\x20Moon\x2etheme\x1e\x7e/\x2econfig/fish/themes/Ros\u00e9\x20Pine\x2etheme\x1e\x7e/\x2econfig/fish/conf\x2ed/rose\x2dpine\x2dpure\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/rose\x2dpine\x2dtide\x2efish
+SETUVAR _fisher_upgraded_to_4_4:\x1d
+SETUVAR fish_key_bindings:fish_vi_key_bindings
+SETUVAR fish_user_paths:/opt/homebrew/bin\x1e/Users/rg8/\x2ecargo/bin\x1e/Users/rg8/\x2elocal/share/solana/install/active_release/bin

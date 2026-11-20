@@ -10,6 +10,13 @@
 
 {
    "$schema": "https://vicinae.com/schemas/config.json",
+   "pop_to_root_on_close": true,
+   "tray": {
+      "enabled": false
+   },
+   "updates": {
+      "show_notice": false
+   },
    "global_shortcuts": {
       "toggle": "control+SPACE"
    },
@@ -17,10 +24,44 @@
       "system_info": false
    },
    "providers": {
-      "@koinzhang/store.raycast.browser-tabs": {
+      "@limonkufu/store.raycast.aerospace": {
+         "entrypoints": {
+            "showShortcuts": {
+               "alias": ":ak"
+            }
+         }
+      },
+      "@mblode/store.raycast.google-search": {
+         "entrypoints": {
+            "aiSearch": {
+               "alias": "g:"
+            }
+         }
+      },
+      "@muhammetakay/store.raycast.youtube-search": {
          "entrypoints": {
             "index": {
+               "alias": ":y"
+            }
+         }
+      },
+      "browser-extension": {
+         "entrypoints": {
+            "browse-bookmarks": {
+               "alias": ":b"
+            },
+            "browse-history": {
+               "alias": "h:"
+            },
+            "browse-tabs": {
                "shortcut": "control+\\"
+            }
+         }
+      },
+      "clipboard": {
+         "entrypoints": {
+            "history": {
+               "alias": ":c"
             }
          }
       },

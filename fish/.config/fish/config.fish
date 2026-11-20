@@ -106,8 +106,12 @@ function yzcf
     nvim ~/.config/yazi/yazi.toml
 end
 
+function sbcf
+    nvim ~/.config/stablebar/config.json
+end
+
 # Fastfetch & Yazi shortcuts
-function fe
+function ff
     fastfetch
 end
 
@@ -165,4 +169,3 @@ end
 # Added by LM Studio CLI (lms)
 set -gx PATH $PATH /var/home/playtron/.lmstudio/bin
 # End of LM Studio CLI section
-
